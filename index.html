@@ -3,20 +3,43 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width"> 
+        <meta name="viewport" content="width=device-width" initial-scale="1.0"> 
         <title>Challenge 01 Encriptador de Texto Alura</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
         </head>
     <body>
-        <header>
-            
-        </header>        
         <main>
-        
+            <div class="contenedor">
+                <section class="titulo">
+                    <img src="imagenes/Logo.png"><p>Encriptador</p>
+                </section>
+                <section class="entrada">
+                    <div class="texto">
+                        <textarea id="texto-entrada" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+                    </div>
+                    <div>
+                        <p>Solo letras minusculas y sin acentos</p>
+                        <div class="botones">
+                            <button class="boton-encriptar">Encriptar</button>
+                            <button class="boton-desencriptar">Desencriptar</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="contenedor-resultado">
+                    <div class="box-resultado">
+                        <img src="imagenes/Muñeco.png" class="muneco">
+                        <p>Ningun mensaje fue encontrado</p>
+                    </div>
+                    <div class="boton-copiar">
+                        <button class="copiar-resultado">Copiar</button>
+                    </div>
+
+                </section>
+                <section class="foot">
+                    <p>Desarrollado por: Cesar Quiñonez</p>
+                </section>
+            </div>
         </main>
-        <footer>
-            
-        </footer>
     </body>
 </html>
