@@ -70,5 +70,6 @@ function copiarResultado() {
   inputFalso.select();
   document.execCommand("copy");
   document.body.removeChild(inputFalso);
-  alert("Copiado al portapapeles!");
+  swal("Se ha copiado el texto encriptado", "", "success");
 }
+

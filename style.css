@@ -175,16 +175,14 @@
     padding: 10px 20px 30px;
 }
 .creditos p {
-    color:rgba(7, 23, 90, 0.5);
     font-size: 1.3em;
     font-weight: bold;
     text-align: right;
     margin: 0 30px;
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(62, 109, 211), 0 0 0.2em rgb(115, 102, 236);
+    color: white;
 }
-.creditos p:hover {
-    color:rgba(15, 42, 148, 0.8);
-    font-size: 1.4em;
-}
+
 .linkedin {
     float: right;
     width: 10%;
