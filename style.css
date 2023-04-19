@@ -1,185 +1,202 @@
-/* Styles para Challenge 01 Encriptador de texto Alura*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&family=Roboto&display=swap');
+
 
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
 }
 
-body {
-    background-color: #fff;
-}
-
-.contenedor{
+.contenedor1 {
     width: 90vw;
-    height: 95%;
     margin: 10px auto;
-    padding: 20px 0;
-    background-color: #afc0f8;
+    background: #dcdfe9;
     border-radius: 10px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
-.titulo p{
-    width: 80vw;
-    display: inline-block;
-    margin: 0 0 30px 0;
+.head {
+    width: 100%;
+    padding: 15px 10px;
+}
+
+.head img, h1 {
+    display: inline;
     text-align: right;
-    font-size: 2em;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
     
 }
 
-.entrada{
+.contenedor2 {
+    width: 100%;
+    padding: 20px 0 20px 70px;
+}
+
+.caja-entrada {
     display: inline-block;
-    width: 80vmin;
-    height: 75vmin;
-    margin: 0 50px;
-    padding: 20px 20px;
-    /*background: darkblue;*/
-    
+    width: 60%;
+    padding: 10px 0 0 80px;
+    margin: 10px 0 0 10px;
 }
 
-.texto {
-    width: 100%;
-    height: 55vmin;
-}
-
-textarea{
-    width: 100%;
-    height: 50vmin;
+.caja-entrada textarea {
+    width: 80%;
     border-radius: 5px;
     margin: 0 0 10px 0;
     padding: 10px 5px;
-    background: #afc0f8;
-    font-size: 20px;
+    background: #dcdfe9;
+    font-size: 1.3em;
     font-weight: bold;
     border: none;
     outline: none;
     resize: none;
 }
-
 ::placeholder{
     color: darkblue
 }
 
-.botones{
+.caja-botones{
     width: 100%;
     margin: 20px auto;
 }
 
-.boton-encriptar{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40%;
-    height: 50px;
+.condicion {
     margin: 0 10px;
+    font-size: 1.1em;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.condicion::before {
+    content: "❗";
+}
+
+#btn-encrypt {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    margin: 0 20px;
     background: #101b57;
     color: #fff;
-    font-size: 20px;
+    
     font-weight: bold;
     cursor: pointer;
     transition: .8s;
     border: none;
     border-radius: 10px;
 }
-
-.boton-encriptar:hover{
+#btn-encrypt:hover {
     background: #3d697e;
     border: 50px;
     border-color: black;
 }
 
-.boton-desencriptar{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40%;
-    height: 50px;
-    margin: 0 10px;
-    background: #afc0f8;
-    color: #101b57;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: .8s;
-    border-radius: 10px;
-}
-
-.boton-desencriptar:hover{
-    background: #101b57;
-    color: #fff;
-}
-
-.contenedor-resultado{
+#btn-decrypt {
     display: inline-block;
-    width: 70vmin;
-    height: 68vh;
-    margin: 20px 50px 0;
-    padding: 10px 20px;
-    vertical-align: top;
-    background-color: #aaafc2;
-    border-radius: 10px;
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
-}
-
-.box-resultado{
-    width: 100%;
-    height: 80%;
-    margin: 10px auto;
-    padding: 20px;
-}
-
-.muneco{
-    width: 70%;
-    margin: 20px 50px;
-    
-}
-
-.box-resultado p{
-    text-align: center;
-    font-weight: bold;
-    color: darkblue;
-}
-
-.boton-copiar{
-    width: 100%;
-    margin: 20px auto;
-    
-}
-
-.copiar-resultado{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40%;
+    width: 150px;
     height: 50px;
-    margin: 0 100px;
-    background: #aaafc2;
+    margin: 0 20px;
+    background: #F3F5FC;
     color: #101b57;
-    font-size: 18px;
     font-weight: bold;
     cursor: pointer;
     transition: .8s;
     border-radius: 10px;
 }
-
-.copiar-resultado:hover{
+#btn-decrypt:hover {
     background: #101b57;
     color: #fff;
 }
 
-.foot {
-    width: 95%;
-    margin: 0 0;
-    padding: 10px;
+.caja-resultado {
+    display:inline-block;
+    width: 35%;
+    margin: 0 auto;
+    padding: 30px 20px;
+    vertical-align: top;
+    background-color: #cdd1e0;
+    border-radius: 10px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);;
+    
 }
 
-.foot p{
-    color: darkblue;
-    font-size: 18px;
-    font-weight: bold;
+.resultado-final {
+    width: 100%;
+    text-align: center;
+}
 
+.resultado-final img {
+    width: 60%;
+    margin-top: 40px; 
+}
+
+.msg {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+.insruccion {
+    font-size: .8;
+    padding: 100px;
+
+}
+
+.boton-copia {
+    width: 100%;
+}
+
+.boton-copia button{
+    width: 150px;
+    height: 50px;
+    margin: 10px 100px 0;
+    background: #cdd1e0;
+    color: #101b57;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .8s;
+    border-radius: 10px;
+}
+.boton-copia button:hover {
+    background: #101b57;
+    color: #fff;
+}
+
+.creditos {
+    width: 100%;
+    padding: 10px 20px 30px;
+}
+.creditos p {
+    color:rgba(7, 23, 90, 0.5);
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: right;
+    margin: 0 30px;
+}
+.creditos p:hover {
+    color:rgba(15, 42, 148, 0.8);
+    font-size: 1.4em;
+}
+.linkedin {
+    float: right;
+    width: 10%;
+    margin: 0 20px 20px 10px;
+}
+.github {
+    float: right;
+    width: 3%;
+    margin: 0 20px 20px 20px;
+}
+
+@media screen and (max-width: 480px) {
+    .contenedor1, .contenedor2, .caja-entrada, .caja-resultado, .resultado-final {
+        width: auto;
+    }
+    .contenedor2, .caja-entrada {
+        padding: 20px 0;
+    }
+    .condicion {
+        text-align: center;
+    }
 }

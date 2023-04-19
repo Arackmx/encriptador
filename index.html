@@ -1,45 +1,54 @@
 <!DOCTYPE html>
-
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width" initial-scale="1.0"> 
-        <title>Challenge 01 Encriptador de Texto Alura</title>
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
-        </head>
-    <body>
-        <main>
-            <div class="contenedor">
-                <section class="titulo">
-                    <img src="imagenes/Logo.png"><p>Encriptador</p>
-                </section>
-                <section class="entrada">
-                    <div class="texto">
-                        <textarea id="texto-entrada" rows="10" placeholder="Ingrese el texto aqui"></textarea>
-                    </div>
-                    <div>
-                        <p>Solo letras minusculas y sin acentos</p>
-                        <div class="botones">
-                            <button class="boton-encriptar">Encriptar</button>
-                            <button class="boton-desencriptar">Desencriptar</button>
-                        </div>
-                    </div>
-                </section>
-                <section class="contenedor-resultado">
-                    <div class="box-resultado">
-                        <img src="imagenes/Muñeco.png" class="muneco">
-                        <p>Ningun mensaje fue encontrado</p>
-                    </div>
-                    <div class="boton-copiar">
-                        <button class="copiar-resultado">Copiar</button>
-                    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Alura Challenge 01 G5 -Encriptador-</title>
+</head>
+<body>
+    <main class="contenedor1">
 
-                </section>
-                <section class="foot">
-                    <p>Desarrollado por: Cesar Quiñonez</p>
-                </section>
+        <section class="head">
+            <img src="imagenes/Logo.png">
+            <h1>Encriptador</h1>
+        </section>
+        <section class="contenedor2">
+            <div class="caja-entrada">
+                <div class="texto">
+                    <textarea id="entrada" rows="10" placeholder="Ingrese su texto aqui"></textarea>
+                </div>
+                    <p class="condicion">Solo letras minusculas y sin acentos</p>
+                <div class="caja-botones">
+                    <button id="btn-encrypt">Encriptar</button>
+                    <button id="btn-decrypt">Desencriptar</button>
+                </div>
             </div>
-        </main>
-    </body>
+            <div class="caja-resultado">
+                <div class="resultado-final">
+                    <h3 id="result"></h3>
+                    <img src="imagenes/undraw_hacker_mind_-6-y85.svg">
+                    <p class="msg">Ningun mensaje fue encontrado</p>
+                    <p class="instruccion">Ingresa el texto que desees encriptar o desencriptar</p>
+                </div>
+                <div class="boton-copia">
+                    <button id="btn-copy">Copiar</button>
+                </div>
+            </div>
+        </section>
+        <section class="creditos">
+            <div>
+                <p>
+                Desarrollado por: Cesar Quiñonez
+                <a href="https://www.linkedin.com/in/cquiñonezti/"><img src="imagenes/linked.png" url class="linkedin"></a>
+                <a href="https://github.com/Arackmx/encriptador"><img src="imagenes/github-mark.png" class="github"></a>
+                </p>
+                
+            </div>
+        </section>
+
+    </main>
+    <script src="codigo.js"></script>
+</body>
 </html>
