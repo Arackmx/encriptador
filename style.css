@@ -81,7 +81,6 @@
     margin: 0 20px;
     background: #101b57;
     color: #fff;
-    
     font-weight: bold;
     cursor: pointer;
     transition: .8s;
@@ -193,20 +192,45 @@
     width: 3%;
     margin: 0 20px 20px 20px;
 }
-@media screen and (min-width: 481px) and (max-width: 940px) {
-    .boton-copia button {
-        margin: 0 auto;
-    }       
-}
+
 
 @media screen and (max-width: 480px) {
-    .contenedor1, .contenedor2, .caja-entrada, .caja-resultado, .resultado-final {
+    .contenedor1, .contenedor2, .caja-entrada, .caja-botones, .caja-resultado, .resultado-final {
         width: auto;
     }
     .contenedor2, .caja-entrada {
         padding: 20px 0;
     }
+    #btn-encrypt, #btn-decrypt {
+        width: 130px;
+    }
     .condicion {
         text-align: center;
     }
+    .creditos p {
+        text-align: left;
+        margin: 0 20px;
+        width: 100%;
+    }
+    .linkedin {
+        margin: 5px 5px 5px 20px;
+        float: right;
+        width: 25%;
+    }
+    .github {
+        margin: 5px 20px 5px 5px;
+        float: right;
+        width: 7%;
+    }
+    
+}
+@media screen and (min-width: 481px) and (max-width: 940px) {
+    
+    #btn-encrypt, #btn-decrypt {
+        width: 100px;
+    }
+
+    .boton-copia button {
+        margin: 0 auto;
+    }       
 }
