@@ -12,32 +12,36 @@
     width: 90vw;
     margin: 10px auto;
     background: #dcdfe9;
+    display: grid;
+    grid-template-rows: auto auto auto;
     border-radius: 10px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
+
 .head {
     width: 100%;
-    padding: 15px 10px;
+    margin: 20px auto 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
 }
 
-.head img, h1 {
-    display: inline;
-    text-align: right;
+.head h1 {
+    display: flex;
     font-family: 'M PLUS 1 Code', sans-serif;
-    font-size: 2.5em;
+    font-size: 2.8em;
     font-weight: bold;
     
 }
 
 .contenedor2 {
     width: 100%;
-    padding: 20px 0 20px 70px;
+    padding: 20px 50px 20px 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .caja-entrada {
-    display: inline-block;
-    width: 60%;
     padding: 10px 0 0 80px;
     margin: 10px 0 0 10px;
 }
@@ -111,15 +115,12 @@
 }
 
 .caja-resultado {
-    display:inline-block;
-    width: 35%;
-    margin: 0 auto;
-    padding: 30px 20px;
-    vertical-align: top;
     background-color: #cdd1e0;
     border-radius: 10px;
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);;
-    
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 5px;
 }
 
 .resultado-final {
@@ -127,9 +128,13 @@
     text-align: center;
 }
 
+.img-resultado {
+    margin: 20px;
+    display:flex;
+    justify-content: center;
+}
+
 #muestra-imagen {
-    width: 100%;
-    margin: 0 0 10px;
     display: none;
 }
 
@@ -142,14 +147,17 @@
     font-size: 1.8em;
     font-weight: bold;
 }
-.insruccion {
-    font-size: .8;
-    padding: 100px;
 
+.instruccion {
+    font-size: 20px;
 }
 
 .boton-copia {
-    width: 100%;
+    height: 100%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    
 }
 
 .boton-copia button{
@@ -169,30 +177,28 @@
     color: #fff;
 }
 
-.creditos {
-    width: 100%;
-    padding: 10px 20px 30px;
-}
 .creditos p {
     font-size: 1.3em;
-    font-weight: bold;
-    text-align: right;
-    margin: 0 30px;
+    margin: 0 0 10px;
     text-shadow: 1px 1px 2px black, 0 0 1em rgb(62, 109, 211), 0 0 0.2em rgb(115, 102, 236);
     color: white;
 }
 
-.linkedin {
-    float: right;
-    width: 10%;
-    margin: 0 20px 20px 10px;
-}
-.github {
-    float: right;
-    width: 3%;
-    margin: 0 20px 20px 20px;
+.creditos p::before {
+    content: "©";
 }
 
+.footer-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-img img {
+    width: 40px;
+    
+}
 
 @media screen and (max-width: 480px) {
     .contenedor1, .contenedor2, .caja-entrada, .caja-botones, .caja-resultado, .resultado-final {
