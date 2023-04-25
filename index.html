@@ -12,15 +12,16 @@
     <main class="contenedor1">
 
         <section class="head">
-            <img src="imagenes/Logo.png">
+            <img src="imagenes/Logo.png" >
             <h1>Encriptador</h1>
+            <img src="imagenes/insignia01.png" width="120" id="insignia">
         </section>
         <section class="contenedor2">
             <div class="caja-entrada">
                 <div class="texto">
-                    <textarea id="entrada" rows="10" placeholder="Ingrese su texto aqui"></textarea>
+                    <textarea id="entrada" rows="10" placeholder="Ingrese su texto aqui" autofocus></textarea>
                 </div>
-                    <p class="condicion">Solo letras minusculas y sin acentos</p>
+                    <div><p class="condicion">Solo letras minusculas y sin acentos</p></div>
                 <div class="caja-botones">
                     <button id="btn-encrypt">Encriptar</button>
                     <button id="btn-decrypt">Desencriptar</button>
@@ -28,13 +29,10 @@
             </div>
             <div class="caja-resultado">
                 <div class="img-resultado"><img src="imagenes/undraw_decide_re_ixfw.svg" id="muestra-imagen" width="300px"></div>
-                <div class="resultado-final">
-                    
                     <h3 id="result"></h3>
                     <img src="imagenes/undraw_hacker_mind_-6-y85.svg" id="ocultar-imagen">
                     <p class="msg" id="ocultar-msg">Ningun mensaje fue encontrado</p>
                     <p class="instruccion" id="ocultar-ins">Ingresa el texto que desees encriptar o desencriptar</p>
-                </div>
                 <div class="boton-copia">
                     <button id="btn-copy" onclick="sweet">Copiar</button>
                 </div>

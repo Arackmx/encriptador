@@ -9,45 +9,50 @@
 }
 
 .contenedor1 {
-    width: 90vw;
+    width: 80%;
+    /* max-width: 1200px; */
     margin: 10px auto;
+    padding: 0 0;
     background: #dcdfe9;
     display: grid;
     grid-template-rows: auto auto auto;
     border-radius: 10px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    gap: 20px
 }
 
 
 .head {
     width: 100%;
-    margin: 20px auto 0;
-    display: grid;
-    grid-template-columns: auto 1fr;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .head h1 {
-    display: flex;
     font-family: 'M PLUS 1 Code', sans-serif;
     font-size: 2.8em;
-    font-weight: bold;
-    
+    font-weight: bold;    
 }
 
 .contenedor2 {
     width: 100%;
-    padding: 20px 50px 20px 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: center;
 }
 
 .caja-entrada {
-    padding: 10px 0 0 80px;
-    margin: 10px 0 0 10px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
 }
 
 .caja-entrada textarea {
-    width: 80%;
+    width: 300px;
     border-radius: 5px;
     margin: 0 0 10px 0;
     padding: 10px 5px;
@@ -62,13 +67,8 @@
     color: darkblue
 }
 
-.caja-botones{
-    width: 100%;
-    margin: 20px auto;
-}
-
 .condicion {
-    margin: 0 10px;
+    margin: auto;
     font-size: 1.1em;
     font-style: italic;
     font-weight: bold;
@@ -78,8 +78,14 @@
     content: "❗";
 }
 
+.caja-botones {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 #btn-encrypt {
-    display: inline-block;
+    
     width: 150px;
     height: 50px;
     margin: 0 20px;
@@ -98,7 +104,7 @@
 }
 
 #btn-decrypt {
-    display: inline-block;
+    
     width: 150px;
     height: 50px;
     margin: 0 20px;
@@ -115,56 +121,61 @@
 }
 
 .caja-resultado {
+    width: 40%;
+    margin: 0 40px 0 80px;
+    padding: 30px;
     background-color: #cdd1e0;
     border-radius: 10px;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     gap: 5px;
 }
 
-.resultado-final {
-    width: 100%;
-    text-align: center;
-}
-
 .img-resultado {
-    margin: 20px;
-    display:flex;
+    margin: 10px 0;
+    display: flex;
     justify-content: center;
 }
 
 #muestra-imagen {
     display: none;
+    width: 60%;
 }
 
-.resultado-final img {
-    width: 60%;
-    margin-top: 40px; 
+#result {
+    width: auto;
+    text-align: center;
+}
+
+#ocultar-imagen {
+    width: 40%;
+    margin-top: 0; 
 }
 
 .msg {
-    font-size: 1.8em;
+    width: 80%;
+    text-align: center;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
 .instruccion {
+    width: 80%;
+    text-align: center;
     font-size: 20px;
 }
 
 .boton-copia {
-    height: 100%;
-    margin: 10px auto;
-    display: flex;
-    justify-content: center;
-    
+    margin: 10px 0;
 }
 
 .boton-copia button{
     display: none;
     width: 150px;
     height: 50px;
-    margin: 10px 100px 0;
     background: #cdd1e0;
     color: #101b57;
     font-weight: bold;
@@ -200,43 +211,47 @@
     
 }
 
-@media screen and (max-width: 480px) {
-    .contenedor1, .contenedor2, .caja-entrada, .caja-botones, .caja-resultado, .resultado-final {
-        width: auto;
-    }
-    .contenedor2, .caja-entrada {
-        padding: 20px 0;
-    }
-    #btn-encrypt, #btn-decrypt {
-        width: 130px;
-    }
-    .condicion {
-        text-align: center;
-    }
-    .creditos p {
-        text-align: left;
-        margin: 0 20px;
+@media screen and (max-width: 900px) {
+    .contenedor1 {
         width: 100%;
     }
-    .linkedin {
-        margin: 5px 5px 5px 20px;
-        float: right;
-        width: 25%;
-    }
-    .github {
-        margin: 5px 20px 5px 5px;
-        float: right;
-        width: 7%;
-    }
-    
 }
-@media screen and (min-width: 481px) and (max-width: 940px) {
+
+@media screen and (max-width: 750px) {
+    .contenedor2 {
+        flex-direction: column;
+    }
+
+    .caja-entrada, .caja-resultado {
+        width: auto;
+        gap: 20px;
+    }
+    .caja-resultado {
+        margin: 20px 0 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .head {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .head h1 {
+        font-size: 2em;
+    }
+    #insignia {
+        order: 0;
+    }
+    .contenedor1 {
+        width: auto;
+    }
+    .condicion {
+        font-size: 1em;
+    }
     
     #btn-encrypt, #btn-decrypt {
         width: 100px;
+        height: 50px;
+        margin: 0 10px;
     }
-
-    .boton-copia button {
-        margin: 0 auto;
-    }       
 }
