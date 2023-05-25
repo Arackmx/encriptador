@@ -21,8 +21,7 @@ function encriptar(){
   ocultaIns.style.display = "none";
   let muestraImg = document.querySelector("#muestra-imagen");
   muestraImg.style.display = "block";
-  let muestraBtn = document.querySelector("#btn-copy");
-  muestraBtn.style.display = "block";
+  
   
   let encriptado = document.querySelector("#entrada").value.toLowerCase();
   let regExp = /^[.,:;"\w\s]+$/g.test(encriptado);
@@ -34,6 +33,8 @@ function encriptar(){
     }
     printResult.innerHTML = encriptado;
     document.getElementById("entrada").value = "";
+    let muestraBtn = document.querySelector("#btn-copy");
+    muestraBtn.style.display = "block";
   }else {return printResult.innerHTML = "No se permiten acentos ni caracteres especiales";}
 }
 
@@ -50,9 +51,7 @@ function desencriptar(){
   ocultaIns.style.display = "none";
   let muestraImg = document.querySelector("#muestra-imagen");
   muestraImg.style.display = "block";
-  let muestraBtn = document.querySelector("#btn-copy");
-  muestraBtn.style.display = "block";
-    
+      
   let desencriptado = document.querySelector("#entrada").value.toLowerCase();
   let regExp = /^[.,:;"\w\s]+$/g.test(desencriptado);
 
@@ -67,6 +66,8 @@ function desencriptar(){
   document.getElementById("entrada").value = "";
   desencriptado = document.querySelector("#ocultar-imagen");
   desencriptado.style.display = "none";
+  let muestraBtn = document.querySelector("#btn-copy");
+  muestraBtn.style.display = "block"; 
 }else {return printResult.innerHTML = "No se permiten acentos ni caracteres especiales";}
 }
 
