@@ -5,7 +5,7 @@ const btnDencrypt = document.querySelector("#btn-decrypt");
 const btnCopy = document.querySelector("#btn-copy");
 const printResult = document.querySelector("#result");
 
-
+let llave = [["e", "enter"],["i","imes"],["a", "ai"],["o", "ober"],["u","ufat"]];
 
 
 // Accion para el boton Encriptar
@@ -24,17 +24,17 @@ function encriptar(){
   let muestraBtn = document.querySelector("#btn-copy");
   muestraBtn.style.display = "block";
   
-  let llave = [["e", "enter"],["i","imes"],["a", "ai"],["o", "ober"],["u","ufat"]];
-  
   let encriptado = document.querySelector("#entrada").value.toLowerCase();
-    
-  for (let i = 0; i < llave.length; i++) {
-    if (encriptado.includes(llave[i][0])){
-      encriptado = encriptado.replaceAll(llave[i][0], llave[i][1])
+  let regExp = /^[.,:;"\w\s]+$/g.test(encriptado);
+   if (regExp) {
+     for (let i = 0; i < llave.length; i++) {
+       if (encriptado.includes(llave[i][0])){
+         encriptado = encriptado.replaceAll(llave[i][0], llave[i][1])
+        }
     }
-  }
-  printResult.innerHTML = encriptado;
-  document.getElementById("entrada").value = "";
+    printResult.innerHTML = encriptado;
+    document.getElementById("entrada").value = "";
+  }else {return printResult.innerHTML = "No se permiten acentos ni caracteres especiales";}
 }
 
 // Accion para el boton Desencriptar
@@ -52,21 +52,22 @@ function desencriptar(){
   muestraImg.style.display = "block";
   let muestraBtn = document.querySelector("#btn-copy");
   muestraBtn.style.display = "block";
-  
-  let llave = [["e", "enter"],["i","imes"],["a", "ai"],["o", "ober"],["u","ufat"]];
-  
-  let desencriptado = document.querySelector("#entrada").value.toLowerCase();
     
-  for (let i = 0; i < llave.length; i++) {
-    if (desencriptado.includes(llave[i][1])){
-      desencriptado = desencriptado.replaceAll(llave[i][1], llave[i][0])
+  let desencriptado = document.querySelector("#entrada").value.toLowerCase();
+  let regExp = /^[.,:;"\w\s]+$/g.test(desencriptado);
+
+  if (regExp) {
+    for (let i = 0; i < llave.length; i++) {
+      if (desencriptado.includes(llave[i][1])){
+        desencriptado = desencriptado.replaceAll(llave[i][1], llave[i][0])
     }
   }
   
-    printResult.innerHTML = desencriptado;
+  printResult.innerHTML = desencriptado;
   document.getElementById("entrada").value = "";
   desencriptado = document.querySelector("#ocultar-imagen");
   desencriptado.style.display = "none";
+}else {return printResult.innerHTML = "No se permiten acentos ni caracteres especiales";}
 }
 
 // Accion para el boton Copiar
