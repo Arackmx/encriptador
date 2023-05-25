@@ -3,59 +3,70 @@
 const btnEncrypt = document.querySelector("#btn-encrypt");
 const btnDencrypt = document.querySelector("#btn-decrypt");
 const btnCopy = document.querySelector("#btn-copy");
-
 const printResult = document.querySelector("#result");
+
+
+
 
 // Accion para el boton Encriptar
 
-btnEncrypt.addEventListener("click", imprimeEncriptado);
+btnEncrypt.addEventListener("click", encriptar);
 
-function imprimeEncriptado(){
-  let ocultaimg = document.querySelector("#ocultar-imagen");
-  ocultaimg.style.display = "none";
-  let ocultamsg = document.querySelector("#ocultar-msg");
-  ocultamsg.style.display = "none";
-  let ocultains = document.querySelector("#ocultar-ins");
-  ocultains.style.display = "none";
-  let muestraimg = document.querySelector("#muestra-imagen");
-  muestraimg.style.display = "block";
-  let muestrabtn = document.querySelector("#btn-copy");
-  muestrabtn.style.display = "block";
-  let resultado = document.querySelector("#entrada").value;
-  const encriptado = resultado.replaceAll("e", "enter").replaceAll("i","imes").replaceAll("a", "ai").replaceAll("o", "ober").replaceAll("u","ufat");
+function encriptar(){
+  let ocultaImg = document.querySelector("#ocultar-imagen");
+  ocultaImg.style.display = "none";
+  let ocultaMsg = document.querySelector("#ocultar-msg");
+  ocultaMsg.style.display = "none";
+  let ocultaIns = document.querySelector("#ocultar-ins");
+  ocultaIns.style.display = "none";
+  let muestraImg = document.querySelector("#muestra-imagen");
+  muestraImg.style.display = "block";
+  let muestraBtn = document.querySelector("#btn-copy");
+  muestraBtn.style.display = "block";
+  
+  let llave = [["e", "enter"],["i","imes"],["a", "ai"],["o", "ober"],["u","ufat"]];
+  
+  let encriptado = document.querySelector("#entrada").value.toLowerCase();
+    
+  for (let i = 0; i < llave.length; i++) {
+    if (encriptado.includes(llave[i][0])){
+      encriptado = encriptado.replaceAll(llave[i][0], llave[i][1])
+    }
+  }
   printResult.innerHTML = encriptado;
   document.getElementById("entrada").value = "";
 }
 
 // Accion para el boton Desencriptar
 
-btnDencrypt.addEventListener("click", imprimedesencriptado);
+btnDencrypt.addEventListener("click", desencriptar);
 
-function imprimedesencriptado(){
-  let ocultaimg = document.querySelector("#ocultar-imagen");
-  ocultaimg.style.display = "none";
-  let ocultamsg = document.querySelector("#ocultar-msg");
-  ocultamsg.style.display = "none";
-  let ocultains = document.querySelector("#ocultar-ins");
-  ocultains.style.display = "none";
-  let muestraimg = document.querySelector("#muestra-imagen");
-  muestraimg.style.display = "block";
-  let muestrabtn = document.querySelector("#btn-copy");
-  muestrabtn.style.display = "block";
-  let resultado = document.querySelector("#entrada").value;
-  const desencriptado = resultado.replaceAll("enter", "e").replaceAll("imes","i").replaceAll("ai", "a").replaceAll("ober", "o").replaceAll("ufat","u");
-  printResult.innerHTML = desencriptado;
+function desencriptar(){
+  let ocultaImg = document.querySelector("#ocultar-imagen");
+  ocultaImg.style.display = "none";
+  let ocultaMsg = document.querySelector("#ocultar-msg");
+  ocultaMsg.style.display = "none";
+  let ocultaIns = document.querySelector("#ocultar-ins");
+  ocultaIns.style.display = "none";
+  let muestraImg = document.querySelector("#muestra-imagen");
+  muestraImg.style.display = "block";
+  let muestraBtn = document.querySelector("#btn-copy");
+  muestraBtn.style.display = "block";
+  
+  let llave = [["e", "enter"],["i","imes"],["a", "ai"],["o", "ober"],["u","ufat"]];
+  
+  let desencriptado = document.querySelector("#entrada").value.toLowerCase();
+    
+  for (let i = 0; i < llave.length; i++) {
+    if (desencriptado.includes(llave[i][1])){
+      desencriptado = desencriptado.replaceAll(llave[i][1], llave[i][0])
+    }
+  }
+  
+    printResult.innerHTML = desencriptado;
   document.getElementById("entrada").value = "";
   desencriptado = document.querySelector("#ocultar-imagen");
   desencriptado.style.display = "none";
-}
-
-function Encriptar(){
-
-}
-
-function Desencriptar(){
-
 }
 
 // Accion para el boton Copiar
